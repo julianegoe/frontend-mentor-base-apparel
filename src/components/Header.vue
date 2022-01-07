@@ -1,5 +1,5 @@
 <template>
-  <div v-if="windowWidth <= '800'" class="header">
+  <div v-if="windowWidth <= '1100'" class="header">
     <img class="header__logo" src="../assets/images/logo.svg" alt="logo" />
   </div>
 </template>

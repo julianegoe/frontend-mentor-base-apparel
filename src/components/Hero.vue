@@ -1,8 +1,8 @@
 <template>
-  <div v-if="windowWidth > '800'" class="hero">
+  <div v-if="windowWidth > '1100'" class="hero">
     <img src="../assets/images/hero-desktop.jpg" class="desktop" />
   </div>
-  <div v-if="windowWidth <= '800'" class="hero">
+  <div v-if="windowWidth <= '1100'" class="hero">
     <img src="../assets/images/hero-mobile.jpg" class="smartphone" />
   </div>
 </template>
