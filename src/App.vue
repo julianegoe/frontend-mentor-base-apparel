@@ -19,10 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/globals.scss";
+@import "src/assets/globals.scss";
 
 body {
-  background-image: $gradient-1;
+  background-image: url("./assets/images/bg-pattern-desktop.svg");
 }
 
 </style>
