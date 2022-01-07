@@ -1,13 +1,22 @@
 <template>
-  <div class="header">
+  <div v-if="windowWidth <= '800'" class="header">
     <img class="header__logo" src="../assets/images/logo.svg" alt="logo" />
   </div>
 </template>
 
 <script>
+import { useWindowSize } from "vue-window-size";
+
 export default {
   name: "Header",
   components: {},
+  setup() {
+    const { width, height } = useWindowSize();
+    return {
+      windowWidth: width,
+      windowHeight: height,
+    };
+  },
 };
 </script>
 

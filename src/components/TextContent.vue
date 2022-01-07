@@ -1,4 +1,7 @@
 <template>
+  <div v-if="windowWidth > '800'" class="header">
+    <img class="header__logo" src="../assets/images/logo.svg" alt="logo" />
+  </div>
   <div class="text-content">
     <Headline />
     <p class="paragraph">
@@ -13,6 +16,7 @@
 <script>
 import Headline from "@/components/Headline";
 import Form from "@/components/Form";
+import { useWindowSize } from "vue-window-size";
 
 export default {
   name: "TextContent",
@@ -20,11 +24,28 @@ export default {
     Headline,
     Form,
   },
+  setup() {
+    const { width, height } = useWindowSize();
+    return {
+      windowWidth: width,
+      windowHeight: height,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "src/assets/globals.scss";
+
+.header {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
 
 .text-content {
   flex-grow: 3;
